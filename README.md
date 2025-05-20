@@ -1,6 +1,8 @@
 # SpringBoot+Vue的学籍管理系统
 
-**有问题可以 :tw-1f1f6:  :tw-1f1f6:  :tw-31-20e3:  :tw-37-20e3:  :tw-36-20e3:  :tw-30-20e3:  :tw-32-20e3:  :tw-37-20e3:  :tw-32-20e3:  :tw-36-20e3:  :tw-32-20e3:  :tw-37-20e3: 交流** 
+**获取源码和数据库等可以加QQ：1760272627** 
+
+ **演示视频：** https://www.bilibili.com/video/BV1iHJtz6EiC/?vd_source=5f273f72fd3dc593e25c33cbccdad12e
 
  **功能：** 
 
@@ -56,19 +58,8 @@
 
 5、毕业服务：在这里查看自己的学籍状态，还有毕业申请
 
- **系统截图：** 
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520144948.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520144957.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520145001.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520145003.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520145006.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520145009.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520145012.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520145015.png)
-![输入图片说明](src/main/resources/mybatis/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250520145018.png)
-
 **采用技术：** SpringBoot，Mybatis-plus，Vue，redis，mysql，ElementUi 
 
  **工具：** idea，vscode，navicat
 
-**有问题可以 :tw-1f1f6:  :tw-1f1f6:  :tw-31-20e3:  :tw-37-20e3:  :tw-36-20e3:  :tw-30-20e3:  :tw-32-20e3:  :tw-37-20e3:  :tw-32-20e3:  :tw-36-20e3:  :tw-32-20e3:  :tw-37-20e3: 交流** 
+**获取源码和数据库等可以加QQ：1760272627** 
