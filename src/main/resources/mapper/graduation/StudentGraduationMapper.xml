@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.student.mapper.StudentGraduationMapper">
+    <select id="getStudentGraduationByTeacher" resultType="studentGraduation">
+        select s.* from user u inner join student_graduation s on u.id = s.user_id
+        <where>
+            1=1 and u.user_type = 1
+            <if test="ew.state != null">
+                and s.state = #{ew.state}
+            </if>
+            <if test="ew.createBy != null and ew.createBy != ''">
+                and s.create_by like concat('%',#{ew.createBy},'%')
+            </if>
+            <if test="ew.classIds!=null and ew.classIds.size() >0">
+                and u.class_id in
+                <foreach collection="ew.classIds" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+</mapper>

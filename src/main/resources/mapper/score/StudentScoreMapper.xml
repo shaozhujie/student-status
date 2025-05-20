@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.student.mapper.StudentScoreMapper">
+    <select id="getTeacherScorePage" resultType="studentScore">
+        select s.*,u.user_name as userName from user u inner join student_score s on u.id = s.student_id
+        <where>
+            1=1 and u.user_type = 1
+            <if test="ew.taskId != null and ew.taskId != ''">
+                and s.task_id = #{ew.taskId}
+            </if>
+            <if test="ew.semesterId != null and ew.semesterId != ''">
+                and u.semester_id = #{ew.semesterId}
+            </if>
+            <if test="ew.classIds!=null and ew.classIds.size() >0">
+                and u.class_id in
+                <foreach collection="ew.classIds" item="item" index="index" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.student.mapper.UserMapper">
+    <select id="getUserPage" resultType="user">
+        select
+            u.*,c.name as collegeName,m.name as majorName,class.name as className
+        from user u
+        left join student_college c on u.college_id = c.id
+        left join student_major m on u.major_id = m.id
+        left join student_class class on u.class_id = class.id
+        <where>
+            1=1
+            <if test="ew.userName != null and ew.userName != ''">
+                and u.user_name like concat('%',#{ew.userName},'%')
+            </if>
+            <if test="ew.loginAccount != null and ew.loginAccount != ''">
+                and u.login_account like concat('%',#{ew.loginAccount},'%')
+            </if>
+            <if test="ew.tel != null and ew.tel != ''">
+                and u.tel like concat('%',#{ew.tel},'%')
+            </if>
+            <if test="ew.status != null">
+                and u.status = #{ew.status}
+            </if>
+            <if test="ew.graduation != null">
+                and u.graduation = #{ew.graduation}
+            </if>
+            <if test="ew.userType != null">
+                and u.user_type = #{ew.userType}
+            </if>
+            <if test="ew.sex != null">
+                and u.sex = #{ew.sex}
+            </if>
+            <if test="ew.collegeId != null and ew.collegeId != ''">
+                and u.college_id like concat('%',#{ew.collegeId},'%')
+            </if>
+            <if test="ew.majorId != null and ew.majorId != ''">
+                and u.major_id like concat('%',#{ew.majorId},'%')
+            </if>
+            <if test="ew.classId != null and ew.classId != ''">
+                and u.class_id like concat('%',#{ew.classId},'%')
+            </if>
+            <if test="ew.sort != null">
+                <if test="ew.sort == 0">
+                    order by comment desc
+                </if>
+            </if>
+            <if test="ew.sort != null">
+                <if test="ew.sort == 1">
+                    order by num_people desc
+                </if>
+            </if>
+        </where>
+    </select>
+</mapper>
